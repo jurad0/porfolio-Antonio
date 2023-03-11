@@ -63,3 +63,63 @@ function cambiarColores(color) {
       }
     }
   }
+
+  // EJERCICIO 3
+
+  
+const nombreInput = document.getElementById('nombre');
+const emailInput = document.getElementById('email');
+const mensajeInput = document.getElementById('mensaje');
+
+
+nombreInput.addEventListener('blur', validarNombre);
+emailInput.addEventListener('blur', validarEmail);
+mensajeInput.addEventListener('blur', validarMensaje);
+
+function validarNombre() {
+  const nombre = nombreInput.value.trim();
+  if (nombre === '') {
+    mostrarError(nombreInput, 'El nombre no puede estar vacío');
+  } else {
+    mostrarExito(nombreInput);
+  }
+}
+
+function validarEmail() {
+  const email = emailInput.value.trim();
+  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!regexEmail.test(email)) {
+    mostrarError(emailInput, 'El email no es válido');
+  } else {
+    mostrarExito(emailInput);
+  }
+}
+
+function validarMensaje() {
+  const mensaje = mensajeInput.value.trim();
+  if (mensaje === '') {
+    mostrarError(mensajeInput, 'El mensaje no puede estar vacío');
+  } else {
+    mostrarExito(mensajeInput);
+  }
+}
+
+function mostrarError(input, mensaje) {
+  input.classList.remove('success');
+  input.classList.add('error');
+  const errorMensaje = document.createElement('span');
+  errorMensaje.classList.add('error-mensaje');
+  errorMensaje.innerText = mensaje;
+  const padre = input.parentElement;
+  padre.appendChild(errorMensaje);
+}
+
+function mostrarExito(input) {
+  input.classList.remove('error');
+  input.classList.add('success');
+  const padre = input.parentElement;
+  const errorMensaje = padre.querySelector('.error-mensaje');
+  if (errorMensaje) {
+    padre.removeChild(errorMensaje);
+  }
+}
