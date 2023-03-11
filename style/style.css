@@ -237,7 +237,7 @@ div.card {
     align-items: center;
     justify-content: center;
     padding: 10vh;
-    color: white;
+    color: gray;
 }
 
 
@@ -356,7 +356,7 @@ form:has(select > option[value="css"]:checked) + .container .css {
 
 #footer{
 
-    height: 15vh;
+    height: 20vh;
     background-color: black;
 
 }
