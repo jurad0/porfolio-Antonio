@@ -237,7 +237,7 @@ div.card {
     align-items: center;
     justify-content: center;
     padding: 10vh;
-    color: white;
+    color: gray;
 }
 
 
@@ -356,7 +356,7 @@ form:has(select > option[value="css"]:checked) + .container .css {
 
 #footer{
 
-    height: 15vh;
+    height: 20vh;
     background-color: black;
 
 }
@@ -391,3 +391,19 @@ form:has(select > option[value="css"]:checked) + .container .css {
 
 .btn-round { border-radius:4px !important}
 .btn.btn-large i { font-size: 24px;}
+
+
+
+input.success {
+    border: 2px solid green;
+  }
+  
+  input.error {
+    border: 2px solid red;
+  }
+  
+  .error-mensaje {
+    color: red;
+    font-size: 12px;
+  }
+  
