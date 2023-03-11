@@ -66,12 +66,12 @@ function cambiarColores(color) {
 
   // EJERCICIO 3
 
-  // seleccionamos los elementos del formulario
+  
 const nombreInput = document.getElementById('nombre');
 const emailInput = document.getElementById('email');
 const mensajeInput = document.getElementById('mensaje');
 
-// añadimos un listener de blur a cada input
+
 nombreInput.addEventListener('blur', validarNombre);
 emailInput.addEventListener('blur', validarEmail);
 mensajeInput.addEventListener('blur', validarMensaje);
